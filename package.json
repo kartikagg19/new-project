@@ -1,0 +1,10 @@
+{
+  "name": "angel-empire",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npm --prefix frontend start",
+    "dev": "npm --prefix frontend dev",
+    "build": "npm --prefix frontend build"
+  }
+}

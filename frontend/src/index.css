@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: 8 44% 96%;
+    --foreground: 322 22% 16%;
+    --card: 15 60% 98%;
+    --card-foreground: 322 22% 16%;
+    --popover: 15 60% 98%;
+    --popover-foreground: 322 22% 16%;
+    --primary: 350 34% 57%;
+    --primary-foreground: 15 60% 98%;
+    --secondary: 10 35% 92%;
+    --secondary-foreground: 322 22% 16%;
+    --muted: 10 25% 91%;
+    --muted-foreground: 330 12% 49%;
+    --accent: 17 52% 65%;
+    --accent-foreground: 322 22% 16%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 10 24% 86%;
+    --input: 10 24% 86%;
+    --ring: 350 34% 57%;
+    --radius: 1rem;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+body {
+    background-color: #faf1ef;
+    color: #33202b;
+    font-family: 'Jost', sans-serif;
+    overflow-x: hidden;
+}
+
+::selection {
+    background: #b76e79;
+    color: #faf1ef;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #faf1ef;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#dca9a0, #b76e79);
+    border-radius: 8px;
+    border: 2px solid #faf1ef;
+}
+
+/* rose-gold gradient text */
+.text-rgold {
+    background: linear-gradient(100deg, #dca9a0 0%, #b76e79 38%, #d8a48f 68%, #8e5a5f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* arched editorial frame */
+.arch {
+    border-radius: 999px 999px 26px 26px;
+}
+
+/* film grain overlay */
+.grain {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    pointer-events: none;
+    opacity: 0.04;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* editorial marquee */
+.marquee {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee var(--marquee-duration, 45s) linear infinite;
+    will-change: transform;
+}
+.marquee:hover .marquee-track {
+    animation-play-state: paused;
+}
+@keyframes marquee {
+    to {
+        transform: translateX(-50%);
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+        animation: none;
+    }
+}
+
+/* shimmer sweep for the owner-portrait slot */
+.shimmer-sweep {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg, rgba(220, 169, 160, 0) 30%, rgba(255, 244, 240, 0.8) 50%, rgba(220, 169, 160, 0) 70%);
+    background-size: 200% 100%;
+    animation: shimmer 3.6s ease-in-out infinite;
+}
+@keyframes shimmer {
+    to {
+        background-position: -200% 0;
+    }
+}
+
+/* hairline rose-gold divider */
+.rule-rgold {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(183, 110, 121, 0.5), transparent);
+}
+
+/* shimmering rose-gold brand text */
+.brand-shimmer {
+    background: linear-gradient(100deg, #e5bfc0 0%, #b76e79 30%, #dca9a0 55%, #e9c97e 80%, #e5bfc0 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: brandShift 9s ease-in-out infinite;
+}
+@keyframes brandShift {
+    0%, 100% {
+        background-position: 0% center;
+    }
+    50% {
+        background-position: 100% center;
+    }
+}
+
+/* warm golden ambient light layer */
+.gold-aura {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(620px 520px at 86% -4%, rgba(233, 201, 126, 0.3), transparent 62%),
+        radial-gradient(760px 640px at -8% 38%, rgba(220, 169, 160, 0.24), transparent 62%),
+        radial-gradient(540px 480px at 92% 88%, rgba(217, 179, 106, 0.2), transparent 62%);
+}
+
+/* elegant underline link */
+.link-underline {
+    position: relative;
+}
+.link-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.link-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
