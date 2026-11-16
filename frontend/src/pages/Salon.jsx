@@ -8,6 +8,7 @@ import { Lines, Eyebrow, Reveal } from "@/components/Reveal";
 import BookingFlow from "@/components/BookingFlow";
 import MobileBottomBar from "@/components/MobileBottomBar";
 import Lightbox from "@/components/Lightbox";
+import VideoGallery from "@/components/VideoGallery";
 import { BUSINESS, IMAGES, REVIEWS, REVIEW_QUOTES, REVIEW_TAGS } from "@/data/content";
 import { openWhatsApp } from "@/lib/scroll";
 
@@ -177,6 +178,8 @@ export default function Salon() {
                     </div>
                 </div>
             </section>
+
+            <VideoGallery />
 
             <section id="reviews" className="pb-16 md:pb-24 scroll-mt-24" data-testid="salon-reviews">
                 <div className="mx-auto max-w-7xl px-5 md:px-8 grid lg:grid-cols-[0.85fr_1.15fr] gap-10">

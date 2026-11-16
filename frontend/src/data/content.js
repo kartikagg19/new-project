@@ -28,6 +28,54 @@ export const IMAGES = {
     nailbar: { src: "/images/salon-6.webp", title: "The Nail Studio", caption: "Arched nail bar & polish showcase" },
 };
 
+export const VIDEOS = [
+    {
+        id: "video-1",
+        title: "Studio Tour & Arched Stations",
+        duration: "0:21",
+        src: "/videos/video-1.mp4",
+        poster: "/videos/posters/video-1.webp",
+        tag: "Atmosphere",
+        desc: "Walkthrough of our daylight styling studio with warm wave ceiling and gold stations.",
+    },
+    {
+        id: "video-2",
+        title: "Hair Transformation & Artistry",
+        duration: "0:25",
+        src: "/videos/video-2.mp4",
+        poster: "/videos/posters/video-2.webp",
+        tag: "Hair Artistry",
+        desc: "Signature hair styling, smoothing and texture refinement by our senior artists.",
+    },
+    {
+        id: "video-3",
+        title: "The Luxury Salon Experience",
+        duration: "0:28",
+        src: "/videos/video-3.mp4",
+        poster: "/videos/posters/video-3.webp",
+        tag: "Rituals",
+        desc: "Bespoke beauty rituals crafted for ultimate relaxation and glow.",
+    },
+    {
+        id: "video-4",
+        title: "The Amber Glow & Fluted Desk",
+        duration: "0:08",
+        src: "/videos/video-4.mp4",
+        poster: "/videos/posters/video-4.webp",
+        tag: "Interior",
+        desc: "Golden ambient lighting, fluted curved reception and calm interiors.",
+    },
+    {
+        id: "video-5",
+        title: "Hair Care & Finishing Blowout",
+        duration: "0:19",
+        src: "/videos/video-5.mp4",
+        poster: "/videos/posters/video-5.webp",
+        tag: "Hair Care",
+        desc: "Professional hair chemical care, blowout and silky gloss finish.",
+    },
+];
+
 export const REVIEWS = [
     {
         name: "Lia Goyal",

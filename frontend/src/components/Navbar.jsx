@@ -13,6 +13,7 @@ const NAVS = {
     ],
     salon: [
         { label: "Gallery", id: "gallery" },
+        { label: "Films", id: "videos" },
         { label: "Reviews", id: "reviews" },
         { label: "Visit", id: "visit" },
     ],
