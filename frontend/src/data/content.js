@@ -26,6 +26,9 @@ export const IMAGES = {
     lounge: { src: "/images/salon-4.webp", title: "The Blush Lounge", caption: "Flower-ring product wall & velvet lounge" },
     pedicure: { src: "/images/salon-5.webp", title: "The Pedicure Throne", caption: "Massaging pedicure thrones under the ring chandelier" },
     nailbar: { src: "/images/salon-6.webp", title: "The Nail Studio", caption: "Arched nail bar & polish showcase" },
+    academyCard: { src: "/images/academy-card.webp", title: "The Academy", caption: "Hands-on professional beauty and styling academy" },
+    productLine: { src: "/images/product-line.webp", title: "The Product Line", caption: "Curated luxury cosmetics and hair care shelf" },
+    modelHero: { src: "/images/model-hero.webp", title: "Signature Editorial Look", caption: "High-fashion hair and bridal artistry" },
 };
 
 export const VIDEOS = [

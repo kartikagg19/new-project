@@ -113,7 +113,7 @@ export default function Academy() {
                             className="relative rounded-[1.8rem] overflow-hidden border border-rose/25 shadow-2xl shadow-rose/15"
                         >
                             <img
-                                src={IMAGES.lounge.src} alt="Angel Academy blush lounge and product wall"
+                                src={IMAGES.academyCard.src} alt="Angel Academy professional hands-on hair & beauty training"
                                 className="w-full h-[440px] md:h-[580px] object-cover"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-plum/80 via-plum/15 to-transparent" />
