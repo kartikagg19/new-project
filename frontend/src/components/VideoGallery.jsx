@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Play, Pause, X, Volume2, VolumeX, Maximize2, Sparkles } from "lucide-react";
+import { Play, Pause, X, Volume2, VolumeX, Maximize2, Film } from "lucide-react";
 import { VIDEOS } from "@/data/content";
 import { Eyebrow, Reveal } from "./Reveal";
 
@@ -118,7 +118,7 @@ export default function VideoGallery() {
 
                                     <div className="absolute inset-x-0 bottom-0 p-6 md:p-7">
                                         <p className="text-[10px] uppercase tracking-[0.25em] text-rose-mist flex items-center gap-1.5 mb-1.5">
-                                            <Sparkles className="w-3 h-3 text-rose-bright" /> HD Salon Film
+                                            <Film className="w-3 h-3 text-rose-bright" /> HD Salon Film
                                         </p>
                                         <h3 className="font-display text-2xl text-[#FAF1EF] font-light leading-snug">
                                             {v.title}
