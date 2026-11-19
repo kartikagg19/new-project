@@ -29,3 +29,5 @@ build
 .vscode
 .idea
 *.log
+*.vtt
+viral_clips/

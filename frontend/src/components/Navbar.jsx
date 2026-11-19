@@ -10,8 +10,10 @@ const NAVS = {
     landing: [
         { label: "Salon", to: "/salon" },
         { label: "Academy", to: "/academy" },
+        { label: "3 Outlets", to: "/salon#outlets" },
     ],
     salon: [
+        { label: "3 Outlets", id: "outlets" },
         { label: "Gallery", id: "gallery" },
         { label: "Films", id: "videos" },
         { label: "Reviews", id: "reviews" },
@@ -27,8 +29,9 @@ const NAVS = {
 export default function Navbar({ variant = "landing", bookLabel = "Book", onBook }) {
     const [open, setOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [showBanner, setShowBanner] = useState(true);
     const navigate = useNavigate();
-    const links = NAVS[variant];
+    const links = NAVS[variant] || NAVS.landing;
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 24);
@@ -40,23 +43,59 @@ export default function Navbar({ variant = "landing", bookLabel = "Book", onBook
     const go = (item) => (e) => {
         e.preventDefault();
         setOpen(false);
-        if (item.to) navigate(item.to);
-        else scrollToId(item.id);
+        if (item.to) {
+            if (item.to.includes("#")) {
+                const [path, hash] = item.to.split("#");
+                navigate(path);
+                setTimeout(() => scrollToId(hash), 150);
+            } else {
+                navigate(item.to);
+            }
+        } else {
+            scrollToId(item.id);
+        }
     };
 
     const wa = (e) => {
         e.preventDefault();
-        openWhatsApp("Hello Angel Empire! I'd like to book an appointment.");
+        openWhatsApp("Hello Angel The Luxury Salon & Academy! I'd like to book an appointment.");
     };
 
     return (
         <header
             className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
                 scrolled || open
-                    ? "bg-blush/90 backdrop-blur-md border-b border-rose/20"
-                    : "bg-transparent border-b border-transparent"
+                    ? "bg-blush/95 backdrop-blur-md border-b border-rose/20 shadow-sm"
+                    : "bg-blush/80 md:bg-transparent border-b border-rose/10 md:border-transparent"
             }`}
         >
+            {/* Top Announcement Bar (Visible in Mobile & Desktop View) */}
+            {showBanner && (
+                <div
+                    data-testid="top-announcement-bar"
+                    className="bg-[#120E15] text-[#FAF1EF] text-[11px] sm:text-xs py-2 px-3 sm:px-6 flex items-center justify-between border-b border-white/10 tracking-wider shadow-inner"
+                >
+                    <div className="flex-1 text-center font-normal flex items-center justify-center gap-1.5 flex-wrap">
+                        <span className="text-[#DCA9A0] font-medium">Bookings, Enquiries :</span>
+                        <a
+                            href="https://wa.me/919599588312?text=Hello%20Angel%20The%20Luxury%20Salon!%20I'd%20like%20to%20enquire%20about%20booking."
+                            target="_blank"
+                            rel="noreferrer"
+                            className="font-medium text-[#FAF1EF] hover:text-[#E9C97E] underline decoration-dotted transition"
+                        >
+                            Call/Whatsapp: 9599588312
+                        </a>
+                    </div>
+                    <button
+                        onClick={() => setShowBanner(false)}
+                        aria-label="Dismiss banner"
+                        className="text-white/60 hover:text-white transition ml-2 p-0.5 rounded"
+                    >
+                        <X className="w-3.5 h-3.5" />
+                    </button>
+                </div>
+            )}
+
             <div className="mx-auto max-w-7xl px-4 md:px-8">
                 <div className="flex items-center justify-between h-16 md:h-20">
                     <Logo />
@@ -116,7 +155,7 @@ export default function Navbar({ variant = "landing", bookLabel = "Book", onBook
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                        className="md:hidden overflow-hidden"
+                        className="md:hidden overflow-hidden bg-blush border-b border-rose/20"
                         data-testid="nav-mobile-menu"
                     >
                         <div className="mx-auto max-w-7xl px-5 pb-6 pt-2">
@@ -130,28 +169,28 @@ export default function Navbar({ variant = "landing", bookLabel = "Book", onBook
                                     {item.label}
                                 </a>
                             ))}
-                            <div className="flex items-center gap-3 pt-4">
+                            <div className="mt-5 flex flex-col gap-3">
                                 <button
-                                    data-testid="nav-mobile-book-button"
-                                    onClick={() => { setOpen(false); onBook(); }}
-                                    className="flex-1 rounded-full bg-rose text-[#FFF9F7] py-3.5 text-[13px] tracking-[0.15em] uppercase"
+                                    onClick={() => {
+                                        setOpen(false);
+                                        onBook();
+                                    }}
+                                    className="w-full text-center rounded-full bg-rose text-[#FFF9F7] py-3 text-[13px] tracking-[0.15em] uppercase"
                                 >
                                     {bookLabel}
                                 </button>
                                 <a
-                                    href="#"
-                                    onClick={wa}
-                                    aria-label="WhatsApp"
-                                    className="w-12 h-12 rounded-full border border-ink/20 flex items-center justify-center text-ink"
+                                    href={`tel:+${BUSINESS.phoneRaw}`}
+                                    className="w-full text-center rounded-full border border-ink/25 text-ink py-2.5 text-sm"
                                 >
-                                    <MessageCircle className="w-5 h-5" />
+                                    Call {BUSINESS.phoneDisplay}
                                 </a>
                                 <a
-                                    href={`tel:+${BUSINESS.phoneRaw}`}
-                                    aria-label="Call"
-                                    className="w-12 h-12 rounded-full border border-ink/20 flex items-center justify-center text-ink"
+                                    href="#"
+                                    onClick={wa}
+                                    className="w-full text-center rounded-full border border-rose/40 text-rose py-2.5 text-sm uppercase tracking-wider"
                                 >
-                                    <Phone className="w-5 h-5" />
+                                    WhatsApp 9599588312
                                 </a>
                             </div>
                         </div>

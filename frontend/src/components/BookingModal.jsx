@@ -33,7 +33,7 @@ export default function BookingModal({ open, onClose, mode = "salon", options = 
     const submit = (e) => {
         e.preventDefault();
         const msg =
-            `Hello Angel Empire! I'd like to ${mode === "academy" ? "enroll" : "book an appointment"}.\n` +
+            `Hello Angel The Luxury Salon & Academy! I'd like to ${mode === "academy" ? "enroll" : "book an appointment"}.\n` +
             `Name: ${name}\n` +
             (phone ? `Phone: ${phone}\n` : "") +
             `${mode === "academy" ? "Course" : "Service"}: ${service}\n` +

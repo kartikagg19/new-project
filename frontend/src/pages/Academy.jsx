@@ -40,7 +40,7 @@ export default function Academy() {
                 <div aria-hidden="true" className="absolute -top-20 -left-24 w-[420px] h-[420px] rounded-full bg-[#E9C97E]/30 blur-3xl animate-floaty" />
                 <div className="relative mx-auto max-w-7xl px-5 md:px-8 grid lg:grid-cols-2 gap-14 lg:gap-16 items-center">
                     <div>
-                        <Eyebrow>Angel Academy · Uttam Nagar</Eyebrow>
+                        <Eyebrow>Angel Academy · Uttam Nagar West</Eyebrow>
                         <Lines
                             as="h1" delay={0.15}
                             className="mt-7 font-display font-light tracking-tight leading-[1.02] text-[clamp(3.2rem,7.5vw,6rem)]"
@@ -51,7 +51,7 @@ export default function Academy() {
                             transition={{ delay: 0.7, duration: 0.8 }}
                             className="mt-7 max-w-md text-ink-soft font-light leading-relaxed"
                         >
-                            Professional courses in makeup artistry, hair styling, hair chemical
+                            Professional courses in nail technology, makeup artistry, hair styling, hair chemical
                             services and hair cutting — Basic &amp; Advance level training inside a
                             working luxury salon.
                         </motion.p>
@@ -159,7 +159,7 @@ export default function Academy() {
                         <div className="max-w-xl">
                             <Eyebrow>The curriculum</Eyebrow>
                             <h2 className="mt-5 font-display font-light text-4xl md:text-5xl tracking-tight leading-tight">
-                                Four paths to <span className="italic text-rgold">mastery</span>
+                                Five paths to <span className="italic text-rgold">mastery</span>
                             </h2>
                         </div>
                         <p className="text-sm text-ink-mute font-light max-w-xs">

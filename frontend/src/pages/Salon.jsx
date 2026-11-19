@@ -9,7 +9,7 @@ import BookingFlow from "@/components/BookingFlow";
 import MobileBottomBar from "@/components/MobileBottomBar";
 import Lightbox from "@/components/Lightbox";
 import VideoGallery from "@/components/VideoGallery";
-import { BUSINESS, IMAGES, REVIEWS, REVIEW_QUOTES, REVIEW_TAGS } from "@/data/content";
+import { BUSINESS, IMAGES, OUTLETS, REVIEWS, REVIEW_QUOTES, REVIEW_TAGS } from "@/data/content";
 import { openWhatsApp } from "@/lib/scroll";
 
 const PHOTOS = Object.values(IMAGES);
@@ -25,7 +25,7 @@ export default function Salon() {
 
     const wa = (e) => {
         e.preventDefault();
-        openWhatsApp("Hello Angel Empire! I'd like to book an appointment at the salon.");
+        openWhatsApp("Hello Angel The Luxury Salon & Academy! I'd like to book an appointment at the salon.");
     };
 
     return (
@@ -37,7 +37,7 @@ export default function Salon() {
                 <div aria-hidden="true" className="absolute -top-20 -left-24 w-[420px] h-[420px] rounded-full bg-[#E9C97E]/30 blur-3xl animate-floaty" />
                 <div className="relative mx-auto max-w-7xl px-5 md:px-8 grid lg:grid-cols-2 gap-14 lg:gap-16 items-center">
                     <div>
-                        <Eyebrow>Unisex Salon · Uttam Nagar East · New Delhi</Eyebrow>
+                        <Eyebrow>Unisex Salon · Uttam Nagar West · New Delhi</Eyebrow>
                         <Lines
                             as="h1" delay={0.15}
                             className="mt-7 font-display font-light tracking-tight leading-[1.02] text-[clamp(3.2rem,7.5vw,6rem)]"
@@ -96,12 +96,12 @@ export default function Salon() {
                         >
                             <div className="relative rounded-[1.8rem] overflow-hidden border border-rose/25 shadow-2xl shadow-rose/15">
                                 <img
-                                    src={IMAGES.studio.src} alt="Angel Empire gold styling studio"
+                                    src={IMAGES.studio.src} alt="Angel The Luxury Salon styling studio"
                                     className="w-full h-[440px] md:h-[580px] object-cover"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-plum/80 via-plum/15 to-transparent" />
                                 <span className="absolute top-4 left-4 rounded-full bg-plum/85 backdrop-blur text-[#F3D9D2] px-4 py-1.5 text-[10px] tracking-[0.25em] uppercase">
-                                    Angel Empire
+                                    Angel The Luxury Salon
                                 </span>
                                 <span className="absolute top-4 right-4 rounded-full bg-blush-card/95 text-ink px-3.5 py-1.5 text-xs font-medium tracking-wide">
                                     ★★★★★ 4.7
@@ -243,6 +243,73 @@ export default function Salon() {
                 </div>
             </section>
 
+            {/* 3 Outlets Section */}
+            <section id="outlets" className="pb-16 md:pb-24 scroll-mt-24" data-testid="salon-outlets">
+                <div className="mx-auto max-w-7xl px-5 md:px-8">
+                    <Reveal>
+                        <div className="text-center max-w-2xl mx-auto mb-12">
+                            <Eyebrow>3 Outlets in Uttam Nagar West</Eyebrow>
+                            <h2 className="mt-4 font-display font-light text-3xl md:text-5xl leading-tight">
+                                Choose your nearest <span className="italic text-rgold">Angel Salon</span>
+                            </h2>
+                            <p className="mt-3 text-sm text-ink-soft font-light">
+                                Click on any salon outlet to open its exact Google Maps location and get directions instantly.
+                            </p>
+                        </div>
+
+                        <div className="grid md:grid-cols-3 gap-6">
+                            {OUTLETS.map((outlet) => (
+                                <div
+                                    key={outlet.id}
+                                    className="group rounded-3xl border border-rose/25 bg-blush-card hover:bg-white p-7 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300"
+                                >
+                                    <div>
+                                        <div className="flex items-center justify-between mb-4">
+                                            <span className="text-[11px] uppercase tracking-[0.25em] text-rose font-medium">
+                                                {outlet.num}
+                                            </span>
+                                            <span className="text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full bg-rose/10 text-rose-dark font-medium">
+                                                {outlet.badge}
+                                            </span>
+                                        </div>
+                                        <h3 className="font-display text-2xl text-ink font-light leading-snug">
+                                            {outlet.name}
+                                        </h3>
+                                        <p className="mt-3 text-sm text-ink-soft font-light leading-relaxed">
+                                            {outlet.address}
+                                        </p>
+                                        <p className="mt-2 text-xs text-rose font-medium">
+                                            Landmark: {outlet.landmark}
+                                        </p>
+                                    </div>
+
+                                    <div className="mt-8 pt-5 border-t border-rose/15 flex flex-col gap-2.5">
+                                        <a
+                                            href={outlet.mapLink}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-rose hover:bg-rose-dark text-[#FFF9F7] py-3 text-[12px] uppercase tracking-[0.16em] transition"
+                                        >
+                                            <MapPin className="w-3.5 h-3.5" />
+                                            <span>Open Map Location</span>
+                                            <ArrowUpRight className="w-3.5 h-3.5" />
+                                        </a>
+                                        <a
+                                            href={outlet.directions}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="w-full inline-flex items-center justify-center gap-2 rounded-full border border-ink/20 hover:border-ink/50 bg-white/70 py-2.5 text-[12px] uppercase tracking-[0.16em] text-ink transition"
+                                        >
+                                            <span>Get Directions</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </Reveal>
+                </div>
+            </section>
+
             <section id="visit" className="pb-20 md:pb-28 scroll-mt-24" data-testid="salon-visit">
                 <div className="mx-auto max-w-7xl px-5 md:px-8">
                     <Reveal>
@@ -294,7 +361,7 @@ export default function Salon() {
                             </div>
                             <div className="relative min-h-[320px] lg:min-h-0">
                                 <iframe
-                                    title="Angel Empire Salon & Academy on Google Maps"
+                                    title="Angel The Luxury Salon & Academy on Google Maps"
                                     src={BUSINESS.mapEmbed}
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
