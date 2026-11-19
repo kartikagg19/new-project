@@ -216,7 +216,7 @@ export const COURSES = [
             "Party eyes with glittery eyes", "Half cut crease", "Smudged & wing liner",
             "Eye brow defining", "Different types of blush application", "Lip shades & lipstick application",
             "Self makeup", "Day makeup", "Evening makeup", "Party makeup", "Evening party makeup",
-            "Haldi makeup", "Mehandi makeup", "Engagement makeup",
+            "Haldi makeup", "Mehandi makeup", "Celebrity Engagement makeup",
         ],
         advance: [
             "Colour wheel theory", "Product knowledge", "Airbrush machine knowledge", "Bridal look",
@@ -561,7 +561,7 @@ export const SERVICE_MENU = [
             { name: "Bridal Makeup", price: 9999 },
             { name: "HD Bridal Makeup", price: 15000 },
             { name: "Party Makeup", price: 1500 },
-            { name: "Engagement Makeup", price: 5000 },
+            { name: "Celebrity Engagement Makeup", price: 5000 },
             { name: "Haldi Makeup", price: 5000 },
             { name: "Mehndi Makeup", price: 5000 },
             { name: "Reception Makeup", price: 10000 },
