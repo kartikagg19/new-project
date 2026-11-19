@@ -8,11 +8,11 @@ const TABS = ["ALL", "HAIR", "SKIN", "NAILS", "WAXING", "LASHES & PMU", "BODY", 
 
 const TAB_BANNERS = {
     ALL: {
-        src: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=900&auto=format&fit=crop&q=80",
+        src: "/images/book-hair.jpg",
         title: "All Luxury Rituals",
     },
     HAIR: {
-        src: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=900&auto=format&fit=crop&q=80",
+        src: "/images/book-hair.jpg",
         title: "Hair Styling, Spa & Colour",
     },
     SKIN: {
@@ -20,15 +20,15 @@ const TAB_BANNERS = {
         title: "Facials, Cleanups & Clinical Derma",
     },
     NAILS: {
-        src: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=900&auto=format&fit=crop&q=80",
+        src: "/images/book-nails.jpg",
         title: "Nails, Gel Extensions & Art",
     },
     WAXING: {
-        src: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=900&auto=format&fit=crop&q=80",
+        src: "/images/book-waxing.jpg",
         title: "Waxing Rituals · 4 Wax Types",
     },
     "LASHES & PMU": {
-        src: "https://images.unsplash.com/photo-1512207736890-6ffed8a84e8d?w=900&auto=format&fit=crop&q=80",
+        src: "/images/book-lashes.jpg",
         title: "Eyelashes, Microblading & Lip Blush",
     },
     BODY: {
@@ -36,7 +36,7 @@ const TAB_BANNERS = {
         title: "Body Therapy, Bleach & Massages",
     },
     BRIDAL: {
-        src: "https://images.unsplash.com/photo-1519741497674-611481863552?w=900&auto=format&fit=crop&q=80",
+        src: "/images/book-bridal.jpg",
         title: "Bridal, HD & Party Makeup",
     },
 };
