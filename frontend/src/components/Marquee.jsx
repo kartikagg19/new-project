@@ -27,3 +27,4 @@ export const ImageMarquee = ({ duration = "55s" }) => {
         </div>
     );
 };
+

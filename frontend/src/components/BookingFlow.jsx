@@ -7,14 +7,38 @@ import { openWhatsApp } from "@/lib/scroll";
 const TABS = ["ALL", "HAIR", "SKIN", "NAILS", "WAXING", "LASHES & PMU", "BODY", "BRIDAL"];
 
 const TAB_BANNERS = {
-    ALL: { src: "/images/salon-2.webp", title: "All Luxury Rituals" },
-    HAIR: { src: "/images/salon-3.webp", title: "Hair Styling, Spa & Colour" },
-    SKIN: { src: "/images/salon-4.webp", title: "Facials, Cleanups & Clinical Derma" },
-    NAILS: { src: "/images/salon-6.webp", title: "Nails, Gel Extensions & Art" },
-    WAXING: { src: "/images/salon-5.webp", title: "Waxing Rituals · 4 Wax Types" },
-    "LASHES & PMU": { src: "/images/product-line.webp", title: "Eyelashes, Microblading & Lip Blush" },
-    BODY: { src: "/images/salon-5.webp", title: "Body Therapy, Bleach & Massages" },
-    BRIDAL: { src: "/images/model-hero.webp", title: "Bridal, HD & Party Makeup" },
+    ALL: {
+        src: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=900&auto=format&fit=crop&q=80",
+        title: "All Luxury Rituals",
+    },
+    HAIR: {
+        src: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=900&auto=format&fit=crop&q=80",
+        title: "Hair Styling, Spa & Colour",
+    },
+    SKIN: {
+        src: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=900&auto=format&fit=crop&q=80",
+        title: "Facials, Cleanups & Clinical Derma",
+    },
+    NAILS: {
+        src: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=900&auto=format&fit=crop&q=80",
+        title: "Nails, Gel Extensions & Art",
+    },
+    WAXING: {
+        src: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=900&auto=format&fit=crop&q=80",
+        title: "Waxing Rituals · 4 Wax Types",
+    },
+    "LASHES & PMU": {
+        src: "https://images.unsplash.com/photo-1512207736890-6ffed8a84e8d?w=900&auto=format&fit=crop&q=80",
+        title: "Eyelashes, Microblading & Lip Blush",
+    },
+    BODY: {
+        src: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=900&auto=format&fit=crop&q=80",
+        title: "Body Therapy, Bleach & Massages",
+    },
+    BRIDAL: {
+        src: "https://images.unsplash.com/photo-1519741497674-611481863552?w=900&auto=format&fit=crop&q=80",
+        title: "Bridal, HD & Party Makeup",
+    },
 };
 
 const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-");
@@ -163,21 +187,22 @@ export default function BookingFlow({ open, onClose }) {
                             {step === 1 ? (
                                 <>
                                     {/* Category Image Banner at Top While Booking */}
-                                    <div className="relative rounded-2xl overflow-hidden mb-6 h-32 sm:h-36 border border-rose/20 shadow-md">
+                                    <div className="relative rounded-2xl overflow-hidden mb-6 h-44 sm:h-52 border border-rose/20 shadow-md">
                                         <img
                                             src={currentBanner.src}
                                             alt={currentBanner.title}
-                                            className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                                            className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
+                                            crossOrigin="anonymous"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-plum/90 via-plum/40 to-transparent" />
-                                        <div className="absolute bottom-3.5 left-4 right-4 flex items-center justify-between text-[#FAF1EF]">
+                                        <div className="absolute inset-0 bg-gradient-to-t from-plum/85 via-plum/30 to-transparent" />
+                                        <div className="absolute bottom-4 left-5 right-4 flex items-end justify-between text-[#FAF1EF]">
                                             <div>
-                                                <p className="text-[9px] uppercase tracking-[0.3em] text-rose-mist">Category</p>
-                                                <h4 className="font-display text-lg sm:text-xl font-light text-[#FFF9F7]">
+                                                <p className="text-[9px] uppercase tracking-[0.3em] text-rose-mist mb-1">Category</p>
+                                                <h4 className="font-display text-xl sm:text-2xl font-light text-[#FFF9F7] leading-tight">
                                                     {currentBanner.title}
                                                 </h4>
                                             </div>
-                                            <span className="text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/15 backdrop-blur-sm border border-white/20">
+                                            <span className="text-[10px] uppercase tracking-wider px-3 py-1.5 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 shrink-0 ml-3">
                                                 {tab}
                                             </span>
                                         </div>
@@ -403,3 +428,4 @@ export default function BookingFlow({ open, onClose }) {
         </AnimatePresence>
     );
 }
+

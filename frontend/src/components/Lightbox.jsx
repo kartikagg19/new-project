@@ -76,3 +76,4 @@ export default function Lightbox({ photos, index, onClose, onNavigate }) {
         </AnimatePresence>
     );
 }
+

@@ -8,3 +8,4 @@ export const scrollToId = (id) => {
 export const openWhatsApp = (message) => {
     window.open(`https://wa.me/919211892610?text=${encodeURIComponent(message)}`, "_blank");
 };
+

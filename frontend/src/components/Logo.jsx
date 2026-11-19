@@ -20,3 +20,4 @@ export default function Logo({ light = false }) {
         </Link>
     );
 }
+

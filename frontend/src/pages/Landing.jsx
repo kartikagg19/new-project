@@ -96,10 +96,6 @@ export default function Landing() {
                             Salon &amp; Academy
                         </p>
 
-                        <p className="mt-4 text-sm sm:text-base text-ink-soft font-light leading-relaxed max-w-xl mx-auto">
-                            A women-owned luxury unisex salon and professional beauty academy across 3 prestigious outlets in Uttam Nagar West.
-                        </p>
-
                         {/* Rating Row */}
                         <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-center">
                             <span className="text-[#B76E79] tracking-[0.2em]">★★★★★</span>
@@ -243,3 +239,4 @@ export default function Landing() {
         </div>
     );
 }
+

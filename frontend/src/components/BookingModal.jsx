@@ -133,3 +133,4 @@ export default function BookingModal({ open, onClose, mode = "salon", options = 
         </AnimatePresence>
     );
 }
+

@@ -44,3 +44,4 @@ export const Eyebrow = ({ children, light = false }) => (
         {children}
     </span>
 );
+

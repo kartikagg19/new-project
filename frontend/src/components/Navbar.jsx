@@ -78,12 +78,12 @@ export default function Navbar({ variant = "landing", bookLabel = "Book", onBook
                     <div className="flex-1 text-center font-normal flex items-center justify-center gap-1.5 flex-wrap">
                         <span className="text-[#DCA9A0] font-medium">Bookings, Enquiries :</span>
                         <a
-                            href="https://wa.me/919599588312?text=Hello%20Angel%20The%20Luxury%20Salon!%20I'd%20like%20to%20enquire%20about%20booking."
+                            href="https://wa.me/919211892610?text=Hello%20Angel%20The%20Luxury%20Salon!%20I'd%20like%20to%20enquire%20about%20booking."
                             target="_blank"
                             rel="noreferrer"
                             className="font-medium text-[#FAF1EF] hover:text-[#E9C97E] underline decoration-dotted transition"
                         >
-                            Call/Whatsapp: 9599588312
+                            Call/Whatsapp: 9211892610
                         </a>
                     </div>
                     <button
@@ -190,7 +190,7 @@ export default function Navbar({ variant = "landing", bookLabel = "Book", onBook
                                     onClick={wa}
                                     className="w-full text-center rounded-full border border-rose/40 text-rose py-2.5 text-sm uppercase tracking-wider"
                                 >
-                                    WhatsApp 9599588312
+                                    WhatsApp 9211892610
                                 </a>
                             </div>
                         </div>
@@ -200,3 +200,4 @@ export default function Navbar({ variant = "landing", bookLabel = "Book", onBook
         </header>
     );
 }
+
