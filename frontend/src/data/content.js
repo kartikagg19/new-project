@@ -82,6 +82,21 @@ export const IMAGES = {
     academyCard: { src: "/images/academy-card.webp", title: "The Academy", caption: "Hands-on professional beauty and styling academy" },
     productLine: { src: "/images/product-line.webp", title: "The Product Line", caption: "Curated luxury cosmetics and hair care shelf" },
     modelHero: { src: "/images/model-hero.webp", title: "Signature Editorial Look", caption: "High-fashion hair and bridal artistry" },
+    bridalGlam: {
+        src: "/images/bridal-artistry-3.jpg",
+        title: "Royal Bridal Artistry",
+        caption: "Signature HD bridal makeup with gold eye artistry and heirloom jewellery",
+    },
+    bridalPink: {
+        src: "/images/bridal-artistry-1.jpg",
+        title: "Emerald & Rose Bridal Glam",
+        caption: "Radiant bride styling in magenta lehenga and emerald polki jewelry",
+    },
+    bridalRed: {
+        src: "/images/bridal-artistry-2.jpg",
+        title: "Classic Crimson Bride",
+        caption: "Traditional red bridal lehenga styling with subtle glitter lids & bold crimson lip",
+    },
 };
 
 export const VIDEOS = [
